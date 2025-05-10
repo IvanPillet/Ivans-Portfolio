@@ -89,6 +89,23 @@
       font-size: 0.9rem;
       color: #666;
     }
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .video-container video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .video-container p {
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
     footer {
       text-align: center;
       padding: 25px;
@@ -130,6 +147,7 @@
     <nav>
       <a href="#projects">Projects</a>
       <a href="#designs">Designs</a>
+      <a href="#shorts">Shorts</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -140,12 +158,12 @@
       <div class="project">
         <h3>Videos</h3>
         <p>Watch my longer videos where I showcase editing, storytelling, and production skills.</p>
-        <a class="button" href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">Watch Videos</a>
+        <a class="button" href="#videos">Watch Videos</a>
       </div>
       <div class="project">
         <h3>Shorts</h3>
         <p>Check out my high-energy Shorts with fast edits, perfect for TikTok and Reels style content.</p>
-        <a class="button" href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">Watch Shorts</a>
+        <a class="button" href="#shorts">Watch Shorts</a>
       </div>
     </div>
 
@@ -202,6 +220,17 @@
         <p>Creative Play Logo</p>
         <small>Click to see full image</small>
       </div>
+    </div>
+  </section>
+
+  <section id="shorts">
+    <h2>My Shorts</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="He Gave Up Everything… For THIS..mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>"He Gave Up Everything… For THIS.." - Short edit example</p>
     </div>
   </section>
 
