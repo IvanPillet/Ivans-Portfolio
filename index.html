@@ -147,7 +147,6 @@
     <nav>
       <a href="#projects">Projects</a>
       <a href="#designs">Designs</a>
-      <a href="#shorts">Shorts</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -158,12 +157,12 @@
       <div class="project">
         <h3>Videos</h3>
         <p>Watch my longer videos where I showcase editing, storytelling, and production skills.</p>
-        <a class="button" href="#videos">Watch Videos</a>
+        <a class="button" href="#" onclick="showShorts()">Watch Videos</a>
       </div>
       <div class="project">
         <h3>Shorts</h3>
         <p>Check out my high-energy Shorts with fast edits, perfect for TikTok and Reels style content.</p>
-        <a class="button" href="#shorts">Watch Shorts</a>
+        <a class="button" href="#" onclick="showShorts()">Watch Shorts</a>
       </div>
     </div>
 
@@ -223,7 +222,7 @@
     </div>
   </section>
 
-  <section id="shorts">
+  <section id="shorts" style="display:none;">
     <h2>My Shorts</h2>
     <div class="video-container">
       <video controls>
@@ -242,5 +241,12 @@
   <footer>
     &copy; 2025 Ivan
   </footer>
+
+  <script>
+    function showShorts() {
+      document.getElementById('shorts').style.display = 'block';
+      document.getElementById('shorts').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
