@@ -244,8 +244,11 @@
 
   <script>
     function showShorts() {
-      document.getElementById('shorts').style.display = 'block';
-      document.getElementById('shorts').scrollIntoView({ behavior: 'smooth' });
+      const shortsSection = document.getElementById('shorts');
+      shortsSection.style.display = 'block';
+      setTimeout(() => {
+        shortsSection.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
   </script>
 </body>
