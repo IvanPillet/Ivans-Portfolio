@@ -13,7 +13,7 @@
       color: #333;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      background: linear-gradient(to right, #000428, #004e92);
       color: white;
       text-align: center;
       padding: 120px 20px 60px;
@@ -74,10 +74,11 @@
       height: 200px;
       object-fit: cover;
       border-radius: 12px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .gallery-item img:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
     }
     .gallery-item p {
       margin-top: 10px;
@@ -94,17 +95,28 @@
       flex-direction: column;
       align-items: center;
       margin-top: 40px;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .video-container video {
       width: 100%;
       max-width: 700px;
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .video-container:hover video {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
     }
     .video-container p {
       margin-top: 15px;
       font-weight: 600;
       font-size: 1.1rem;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    .video-container:hover p {
+      opacity: 1;
     }
     footer {
       text-align: center;
@@ -236,7 +248,7 @@
         <source src="ezyZip.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <p>"EzyZip Edit" - Short edit example</p>
+      <p>"iShowSpeed Edit" - Short edit example</p>
     </div>
   </section>
 
