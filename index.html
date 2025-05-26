@@ -190,14 +190,8 @@
     </div>
   </section>
 
-  
-    <div class="video-container">
-      <video controls>
-        <source src="descarga.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>"Short with Captions Example" - Edited with subtitles</p>
-    </div>
+  <section id="shorts" style="display:none;">
+    <h2>My Shorts & Videos</h2>
     <div class="video-container">
       <video controls>
         <source src="ezyZip.mp4" type="video/mp4">
@@ -226,6 +220,13 @@
       </video>
       <p>"Looksmaxxing Video Example" - Long-form edit</p>
     </div>
+    <div class="video-container">
+      <video controls>
+        <source src="descarga.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>"Short with Captions Example" - Edited with subtitles</p>
+    </div>
   </section>
 
   <section id="designs" style="display:none;">
@@ -252,17 +253,15 @@
 
   <script>
     function showShorts() {
-      const shortsSection = document.getElementById('shorts');
-      shortsSection.style.display = 'block';
+      document.getElementById('shorts').style.display = 'block';
       setTimeout(() => {
-        shortsSection.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('shorts').scrollIntoView({ behavior: 'smooth' });
       }, 100);
     }
     function showDesigns() {
-      const designsSection = document.getElementById('designs');
-      designsSection.style.display = 'block';
+      document.getElementById('designs').style.display = 'block';
       setTimeout(() => {
-        designsSection.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('designs').scrollIntoView({ behavior: 'smooth' });
       }, 100);
     }
   </script>
