@@ -52,7 +52,13 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-    .projects, .gallery {
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
@@ -159,7 +165,6 @@
     <p>Creative video editor with 3 years of experience, specializing in short-form content like YouTube Shorts, TikToks, and Reels. Passionate about bringing ideas to life.</p>
     <nav>
       <a href="#projects">Projects</a>
-      <a href="#designs">Designs</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -172,8 +177,12 @@
         <p>Explore my edited videos, including both fast-paced shorts and engaging long-form content.</p>
         <a class="button" href="#shorts" onclick="showShorts()">Watch Videos</a>
       </div>
+      <div class="project">
+        <h3>Thumbnails & Logos</h3>
+        <p>See my custom design work for thumbnails, banners, and logos.</p>
+        <a class="button" href="#designs" onclick="showDesigns()">View Thumbnails & Logos</a>
+      </div>
     </div>
-
     <div class="youtube-promo">
       <h2>Want to see more?</h2>
       <p>Check out my YouTube channel for more edits and examples!</p>
@@ -181,8 +190,14 @@
     </div>
   </section>
 
-  <section id="shorts" style="display:none;">
-    <h2>My Shorts & Videos</h2>
+  
+    <div class="video-container">
+      <video controls>
+        <source src="descarga.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>"Short with Captions Example" - Edited with subtitles</p>
+    </div>
     <div class="video-container">
       <video controls>
         <source src="ezyZip.mp4" type="video/mp4">
@@ -211,7 +226,9 @@
       </video>
       <p>"Looksmaxxing Video Example" - Long-form edit</p>
     </div>
+  </section>
 
+  <section id="designs" style="display:none;">
     <h2>Thumbnails, Logos & Banners</h2>
     <p>Here are some examples of my design work. I create custom thumbnails, logos, and YouTube banners for content creators.</p>
     <div class="gallery">
@@ -239,6 +256,13 @@
       shortsSection.style.display = 'block';
       setTimeout(() => {
         shortsSection.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+    function showDesigns() {
+      const designsSection = document.getElementById('designs');
+      designsSection.style.display = 'block';
+      setTimeout(() => {
+        designsSection.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     }
   </script>
