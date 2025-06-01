@@ -267,3 +267,272 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivan's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #000428, #004e92);
+      color: white;
+      text-align: center;
+      padding: 120px 20px 60px;
+      position: relative;
+      box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    header p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #60a5fa;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .project, .gallery-item {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .project:hover, .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+    }
+    .gallery-item p {
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    .gallery-item small {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .video-container video, .video-container iframe {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .video-container:hover video, .video-container:hover iframe {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+    }
+    .video-container p {
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    .video-container:hover p {
+      opacity: 1;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1e3a8a;
+      color: white;
+      margin-top: 60px;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 28px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background: #2563eb;
+    }
+    .contact p, .contact a {
+      font-size: 1.1rem;
+    }
+    .youtube-promo {
+      text-align: center;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ivan's Portfolio</h1>
+    <p>Creative video editor with 3 years of experience, specializing in short-form content like YouTube Shorts, TikToks, and Reels. Passionate about bringing ideas to life.</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Videos</h3>
+        <p>Explore my edited videos, including both fast-paced shorts and engaging long-form content.</p>
+        <a class="button" href="#shorts" onclick="showShorts()">Watch Videos</a>
+      </div>
+      <div class="project">
+        <h3>Thumbnails & Logos</h3>
+        <p>See my custom design work for thumbnails, banners, and logos.</p>
+        <a class="button" href="#designs" onclick="showDesigns()">View Thumbnails & Logos</a>
+      </div>
+    </div>
+    <div class="youtube-promo">
+      <h2>Want to see more?</h2>
+      <p>Check out my YouTube channel for more edits and examples!</p>
+      <a class="button" href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">Visit My YouTube</a>
+    </div>
+  </section>
+
+  <section id="shorts" style="display:none;">
+    <h2>My Shorts & Videos</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="ezyZip.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>"iShowSpeed Edit" - Short edit example</p>
+    </div>
+    <div class="video-container">
+      <video controls>
+        <source src="funnyspeed (2) (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>"Funny Speed Edit" - Short edit example</p>
+    </div>
+    <div class="video-container">
+      <video controls>
+        <source src="ziasandblou.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>"Zias and Blou" - Dynamic reaction edit</p>
+    </div>
+    <div class="video-container">
+      <video controls>
+        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>"Looksmaxxing Video Example" - Long-form edit</p>
+    </div>
+    <div class="video-container">
+      <video controls>
+        <source src="descarga.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>"Short with Captions Example" - Edited with subtitles</p>
+    </div>
+  </section>
+
+  <section id="designs" style="display:none;">
+    <h2>Thumbnails, Logos & Banners</h2>
+    <p>Here are some examples of my design work. I create custom thumbnails, logos, and YouTube banners for content creators.</p>
+    <div class="gallery">
+      <div class="gallery-item"><a href="design1.png" target="_blank"><img src="design1.png" alt="DXRKU Space Banner"></a><p>DXRKU Space Banner</p><small>Click to see full image</small></div>
+      <div class="gallery-item"><a href="design2.png" target="_blank"><img src="design2.png" alt="Steevy Gaming Banner"></a><p>Steevy Gaming Banner</p><small>Click to see full image</small></div>
+      <div class="gallery-item"><a href="design3.png" target="_blank"><img src="design3.png" alt="ClipStorm Logo"></a><p>ClipStorm Logo</p><small>Click to see full image</small></div>
+      <div class="gallery-item"><a href="design4.png" target="_blank"><img src="design4.png" alt="THREX YouTube Banner"></a><p>THREX YouTube Banner</p><small>Click to see full image</small></div>
+      <div class="gallery-item"><a href="design5.png" target="_blank"><img src="design5.png" alt="Top 10 Rock Singers Thumbnail"></a><p>Top 10 Rock Singers Thumbnail</p><small>Click to see full image</small></div>
+      <div class="gallery-item"><a href="design6.png" target="_blank"><img src="design6.png" alt="Creative Play Logo"></a><p>Creative Play Logo</p><small>Click to see full image</small></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:lovenirs@gmail.com">lovenirs@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Ivan
+  </footer>
+
+  <script>
+    function showShorts() {
+      document.getElementById('shorts').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('shorts').scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+    function showDesigns() {
+      document.getElementById('designs').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('designs').scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  </script>
+</body>
+</html>
