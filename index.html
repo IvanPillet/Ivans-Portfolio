@@ -9,14 +9,19 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #1e003c, #3a0ca3);
+      background: #0f0f1a url('animated-background.gif') center center / cover no-repeat fixed;
       color: white;
     }
     header {
       text-align: center;
       padding: 100px 20px 40px;
     }
-    header h1, header h2 {
+    header h1 {
+      font-size: 4rem;
+      color: #a29bfe;
+      margin: 0;
+    }
+    header h2 {
       font-size: 4rem;
       color: #a29bfe;
       margin: 0;
@@ -42,25 +47,21 @@
     .video-section h2 {
       text-align: center;
       font-size: 2.5rem;
-      color: #a29bfe;
       margin-bottom: 40px;
+      color: #a29bfe;
     }
     .video-container {
-      background-color: #1e003c;
-      border: 3px solid #ff66c4;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 60px;
-      box-shadow: 0 0 20px #ff66c4;
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 60px;
     }
-    .video-container video, .video-container iframe {
+    .video-container video,
+    .video-container iframe {
       width: 100%;
-      max-width: 420px;
-      height: auto;
+      max-width: 460px;
       border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
     .video-container p {
       margin-top: 12px;
@@ -72,10 +73,39 @@
       font-size: 0.9rem;
       color: #bbb;
     }
+    .cta-section {
+      text-align: center;
+      margin-top: 60px;
+      padding: 60px 20px;
+    }
+    .cta-section h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #a29bfe;
+    }
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #ccc;
+    }
+    .cta-section a.button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #a29bfe;
+      color: #0f0f1a;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .cta-section a.button:hover {
+      background: #7c6de2;
+    }
     footer {
       text-align: center;
       padding: 30px;
-      background: #14022b;
+      background: #0f0f1a;
       color: #ccc;
     }
   </style>
@@ -144,7 +174,12 @@
       <small>Click to view in full screen</small>
       <p>"Short with Captions Example" - Edited with subtitles</p>
     </div>
+  </section>
 
+  <section class="cta-section">
+    <h3>Want to see more?</h3>
+    <p>Check out my YouTube channel for more edits and examples!</p>
+    <a class="button" href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">Click</a>
   </section>
 
   <footer>
