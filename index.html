@@ -9,19 +9,14 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0f0f1a url('animated-background.gif') center center / cover no-repeat fixed;
+      background: linear-gradient(135deg, #1e1030, #2d124e);
       color: white;
     }
     header {
       text-align: center;
       padding: 100px 20px 40px;
     }
-    header h1 {
-      font-size: 4rem;
-      color: #a29bfe;
-      margin: 0;
-    }
-    header h2 {
+    header h1, header h2 {
       font-size: 4rem;
       color: #a29bfe;
       margin: 0;
@@ -48,19 +43,24 @@
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 40px;
+      color: #a29bfe;
     }
     .video-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 60px;
+      border: 2px solid #ff6ec7;
+      border-radius: 12px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      box-shadow: 0 0 10px #ff6ec7;
     }
     .video-container video,
     .video-container iframe {
       width: 100%;
       max-width: 460px;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
     .video-container p {
       margin-top: 12px;
@@ -75,7 +75,7 @@
     footer {
       text-align: center;
       padding: 30px;
-      background: #0f3460;
+      background: #1e1030;
       color: #ccc;
     }
   </style>
@@ -144,7 +144,6 @@
       <small>Click to view in full screen</small>
       <p>"Short with Captions Example" - Edited with subtitles</p>
     </div>
-
   </section>
 
   <footer>
