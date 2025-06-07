@@ -9,13 +9,12 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #2e008b, #2e1a94);
+      background: linear-gradient(to bottom, #240046, #3c096c);
       color: white;
-      scroll-behavior: smooth;
     }
     header {
       text-align: center;
-      padding: 80px 20px 20px;
+      padding: 100px 20px 40px;
     }
     header h1, header h2 {
       font-size: 4rem;
@@ -32,19 +31,18 @@
       width: 90%;
       height: 2px;
       background: #a29bfe;
-      margin: 40px auto;
+      margin: 30px auto;
       border-radius: 4px;
     }
     .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+      text-align: center;
       margin-bottom: 20px;
     }
     .nav-links a {
+      margin: 0 15px;
       text-decoration: none;
+      font-weight: 800;
       color: white;
-      font-weight: 600;
       font-size: 1.2rem;
     }
     section {
@@ -58,62 +56,70 @@
       margin-bottom: 20px;
       color: #a29bfe;
     }
+    .video-divider {
+      width: 80%;
+      height: 2px;
+      background: #a29bfe;
+      margin: 30px auto;
+    }
     .video-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 60px;
+      animation: fadeIn 1.5s ease;
     }
-    .video-container video {
+    .video-container video, .video-container iframe {
       width: 100%;
       max-width: 460px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-    .video-container p, .video-container small {
+    .video-container p {
+      margin-top: 12px;
+      font-size: 1.1rem;
       text-align: center;
     }
     .video-container small {
-      color: #bbb;
+      margin-top: 5px;
       font-size: 0.9rem;
+      color: #bbb;
     }
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-    .youtube-section {
+    .yt-section {
       text-align: center;
-      margin-top: 20px;
+      padding: 40px 20px 60px;
     }
-    .youtube-section img {
-      width: 80px;
-      margin-bottom: 15px;
-    }
-    .youtube-section h2 {
-      color: #a29bfe;
-    }
-    .youtube-section p {
+    .yt-section img {
+      width: 60px;
       margin-bottom: 10px;
     }
-    .youtube-section a button {
-      background-color: #a29bfe;
-      border: none;
-      color: black;
+    .yt-section h2 {
+      font-size: 2rem;
+      color: #a29bfe;
+      margin-bottom: 10px;
+    }
+    .yt-section p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    .yt-section a {
+      display: inline-block;
       padding: 10px 20px;
-      border-radius: 8px;
+      background: #a29bfe;
+      border-radius: 10px;
+      color: black;
       font-weight: bold;
-      cursor: pointer;
+      text-decoration: none;
     }
     footer {
       text-align: center;
-      padding: 30px;
-      background: #1a0033;
+      padding: 20px;
+      background: #1c0033;
       color: #ccc;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -122,16 +128,18 @@
     <h1>IVAN'S</h1>
     <h2>PORTFOLIO</h2>
     <p>Creative video editor with 3+ years of experience specializing in TikToks, YouTube Shorts, and engaging long-form content. Here's a showcase of my recent projects.</p>
-    <div class="divider"></div>
-    <div class="nav-links">
-      <a href="#videos">Projects</a>
-      <a href="#youtube">YouTube</a>
-    </div>
   </header>
 
-  <section class="video-section" id="videos">
+  <div class="divider"></div>
+
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#youtube">YouTube</a>
+  </div>
+
+  <section id="projects" class="video-section">
     <h2>Video Examples</h2>
-    <div class="divider"></div>
+    <div class="video-divider"></div>
 
     <div class="video-container">
       <video controls>
@@ -141,53 +149,17 @@
       <p>"TikTok-Style Short Edit" – Creative vertical example</p>
     </div>
 
-    <div class="video-container">
-      <video controls>
-        <source src="ezyZip.mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"iShowSpeed Edit" - Short edit example</p>
-    </div>
+    <!-- Add other video-container blocks here as needed -->
 
-    <div class="video-container">
-      <video controls>
-        <source src="funnyspeed (2) (1).mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Funny Speed Edit" - Short edit example</p>
-    </div>
-
-    <div class="video-container">
-      <video controls>
-        <source src="ziasandblou.mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Zias and Blou" - Dynamic reaction edit</p>
-    </div>
-
-    <div class="video-container">
-      <video controls>
-        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Looksmaxxing Video Example" - Long-form edit</p>
-    </div>
-
-    <div class="video-container">
-      <video controls>
-        <source src="descarga.mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Short with Captions Example" - Edited with subtitles</p>
-    </div>
   </section>
 
-  <section class="youtube-section fade-in" id="youtube">
-    <div class="divider"></div>
+  <div class="divider"></div>
+
+  <section id="youtube" class="yt-section">
     <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo">
     <h2>Want to see more?</h2>
     <p>Check out my YouTube channel for more edits and examples!</p>
-    <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank"><button>Click</button></a>
+    <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">Click</a>
   </section>
 
   <footer>
