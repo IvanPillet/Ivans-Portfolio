@@ -97,8 +97,8 @@
     }
 
     .cta-section img {
-      width: 150px; /* 🔥 BIGGER logo size */
-      margin: 20px 0 10px;
+      width: 150px;
+      margin: 10px 0;
     }
 
     .cta-section h2 {
@@ -143,6 +143,24 @@
       margin: 40px auto 10px;
       border-radius: 4px;
     }
+
+    .nav-index {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .nav-index a {
+      color: #a29bfe;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-index a:hover {
+      border-color: #a29bfe;
+    }
   </style>
 </head>
 <body>
@@ -153,61 +171,18 @@
     <div class="divider"></div>
   </header>
 
-  <section class="video-section fade-in">
+  <div class="nav-index fade-in">
+    <a href="#projects">Projects</a>
+    <a href="#youtube">YouTube</a>
+  </div>
+
+  <section class="video-section fade-in" id="projects">
     <h2>Video Examples</h2>
-
-    <div class="video-container fade-in">
-      <video controls>
-        <source src="ytshorts-downloader.com_jk7KVM.mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"TikTok-Style Short Edit" – Creative vertical example</p>
-    </div>
-
-    <div class="video-container fade-in">
-      <video controls>
-        <source src="ezyZip.mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"iShowSpeed Edit" - Short edit example</p>
-    </div>
-
-    <div class="video-container fade-in">
-      <video controls>
-        <source src="funnyspeed (2) (1).mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Funny Speed Edit" - Short edit example</p>
-    </div>
-
-    <div class="video-container fade-in">
-      <video controls>
-        <source src="ziasandblou.mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Zias and Blou" - Dynamic reaction edit</p>
-    </div>
-
-    <div class="video-container fade-in">
-      <video controls>
-        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Looksmaxxing Video Example" - Long-form edit</p>
-    </div>
-
-    <div class="video-container fade-in">
-      <video controls>
-        <source src="descarga.mp4" type="video/mp4">
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Short with Captions Example" - Edited with subtitles</p>
-    </div>
-
+    <!-- video examples go here -->
     <div class="divider-bottom"></div>
   </section>
 
-  <section class="cta-section fade-in">
+  <section class="cta-section fade-in" id="youtube">
     <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo" />
     <h2>Want to see more?</h2>
     <p>Check out my YouTube channel for more edits and examples!</p>
