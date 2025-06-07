@@ -4,133 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ivan's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #2a0845, #6441a5);
+      background: linear-gradient(135deg, #2b0a52, #4b1f8a);
       color: white;
     }
-
     header {
       text-align: center;
       padding: 100px 20px 40px;
     }
-
-    header h1,
+    header h1 {
+      font-size: 4rem;
+      color: #a29bfe;
+      margin: 0;
+    }
     header h2 {
       font-size: 4rem;
       color: #a29bfe;
       margin: 0;
     }
-
     header p {
       max-width: 700px;
       margin: 20px auto;
       font-size: 1.2rem;
       opacity: 0.85;
     }
-
     .divider {
       width: 60%;
       height: 2px;
       background: #a29bfe;
-      margin: 40px auto;
+      margin: 40px auto 20px;
       border-radius: 4px;
     }
-
     section {
       padding: 40px 20px;
       max-width: 960px;
       margin: 0 auto;
     }
-
     .video-section h2 {
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 40px;
       color: #a29bfe;
     }
-
     .video-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 60px;
     }
-
-    .video-container video {
+    .video-container video,
+    .video-container iframe {
       width: 100%;
       max-width: 460px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-
     .video-container p {
       margin-top: 12px;
       font-size: 1.1rem;
       text-align: center;
     }
-
     .video-container small {
       margin-top: 5px;
       font-size: 0.9rem;
       color: #bbb;
     }
-
     .cta-section {
       text-align: center;
-      padding: 60px 20px;
+      padding: 20px 20px 60px;
     }
-
     .cta-section img {
-      width: 180px;
+      width: 70px;
       margin-bottom: 10px;
-      transition: transform 0.3s;
     }
-
-    .cta-section img:hover {
-      transform: scale(1.05);
-    }
-
     .cta-section h2 {
       color: #a29bfe;
       font-size: 2rem;
-      margin: 10px 0;
+      margin-bottom: 10px;
     }
-
     .cta-section p {
-      color: #e0dfff;
-      font-size: 1rem;
       margin-bottom: 20px;
     }
-
     .cta-section a.button {
-      background-color: #a29bfe;
-      color: #1a1a1a;
       padding: 10px 20px;
+      background: #a29bfe;
+      color: #000;
+      border: none;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      border-radius: 10px;
-      transition: background 0.3s;
-      display: inline-block;
+      font-size: 1rem;
     }
-
-    .cta-section a.button:hover {
-      background-color: #c5bfff;
-    }
-
     footer {
       text-align: center;
       padding: 30px;
-      background: #1a103d;
+      background: #2b0a52;
       color: #ccc;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>IVAN'S</h1>
     <h2>PORTFOLIO</h2>
@@ -143,7 +120,8 @@
 
     <div class="video-container">
       <video controls>
-        <source src="ytshorts-downloader.com_jk7KVM.mp4" type="video/mp4">
+        <source src="ytshorts-downloader.com_jk7KVM.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"TikTok-Style Short Edit" – Creative vertical example</p>
@@ -151,7 +129,8 @@
 
     <div class="video-container">
       <video controls>
-        <source src="ezyZip.mp4" type="video/mp4">
+        <source src="ezyZip.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"iShowSpeed Edit" - Short edit example</p>
@@ -159,7 +138,8 @@
 
     <div class="video-container">
       <video controls>
-        <source src="funnyspeed (2) (1).mp4" type="video/mp4">
+        <source src="funnyspeed (2) (1).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"Funny Speed Edit" - Short edit example</p>
@@ -167,7 +147,8 @@
 
     <div class="video-container">
       <video controls>
-        <source src="ziasandblou.mp4" type="video/mp4">
+        <source src="ziasandblou.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"Zias and Blou" - Dynamic reaction edit</p>
@@ -175,7 +156,8 @@
 
     <div class="video-container">
       <video controls>
-        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4">
+        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"Looksmaxxing Video Example" - Long-form edit</p>
@@ -183,7 +165,8 @@
 
     <div class="video-container">
       <video controls>
-        <source src="descarga.mp4" type="video/mp4">
+        <source src="descarga.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"Short with Captions Example" - Edited with subtitles</p>
@@ -193,15 +176,14 @@
   </section>
 
   <section class="cta-section">
-    <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo">
+    <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo" />
     <h2>Want to see more?</h2>
     <p>Check out my YouTube channel for more edits and examples!</p>
-    <a class="button" href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">Click</a>
+    <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank" class="button">Click</a>
   </section>
 
   <footer>
     &copy; 2025 Ivan — All rights reserved.
   </footer>
-
 </body>
 </html>
