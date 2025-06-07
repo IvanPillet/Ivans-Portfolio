@@ -9,173 +9,216 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #2b0a52, #4b1f8a);
+      background: linear-gradient(135deg, #4b0082, #6a0dad);
       color: white;
     }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     header {
       text-align: center;
       padding: 100px 20px 40px;
     }
-    header h1 {
+
+    header h1, header h2 {
       font-size: 4rem;
       color: #a29bfe;
       margin: 0;
     }
-    header h2 {
-      font-size: 4rem;
-      color: #a29bfe;
-      margin: 0;
-    }
+
     header p {
       max-width: 700px;
       margin: 20px auto;
       font-size: 1.2rem;
       opacity: 0.85;
     }
+
     .divider {
       width: 60%;
       height: 2px;
       background: #a29bfe;
-      margin: 40px auto 10px;
+      margin: 40px auto;
       border-radius: 4px;
     }
+
     section {
       padding: 40px 20px;
       max-width: 960px;
       margin: 0 auto;
     }
+
     .video-section h2 {
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 40px;
       color: #a29bfe;
     }
+
     .video-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 60px;
     }
-    .video-container video,
-    .video-container iframe {
+
+    .video-container video {
       width: 100%;
       max-width: 460px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-    .video-container p {
-      margin-top: 12px;
-      font-size: 1.1rem;
-      text-align: center;
-    }
+
     .video-container small {
       margin-top: 5px;
       font-size: 0.9rem;
       color: #bbb;
     }
+
+    .video-container p {
+      margin-top: 12px;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
     .cta-section {
       text-align: center;
-      padding: 10px 20px 60px;
-      margin-top: -10px;
+      padding: 40px 0 60px;
     }
+
     .cta-section img {
-      width: 160px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-    .cta-section h2 {
-      color: #a29bfe;
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .cta-section p {
+      width: 80px;
       margin-bottom: 20px;
     }
-    .cta-section a.button {
-      padding: 10px 20px;
-      background: #a29bfe;
-      color: #000;
+
+    .cta-section h2 {
+      font-size: 2rem;
+      color: #a29bfe;
+    }
+
+    .cta-section p {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .cta-section .button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
       border: none;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
+      background: #a29bfe;
+      color: #2d2d2d;
+      cursor: pointer;
+      transition: background 0.3s;
     }
+
+    .cta-section .button:hover {
+      background: #c1b5ff;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
-      background: #2b0a52;
+      background: #2d004d;
       color: #ccc;
+    }
+
+    .divider-bottom {
+      width: 80%;
+      height: 2px;
+      background: #bbaaff;
+      margin: 60px auto 40px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <h1>IVAN'S</h1>
     <h2>PORTFOLIO</h2>
     <p>Creative video editor with 3+ years of experience specializing in TikToks, YouTube Shorts, and engaging long-form content. Here's a showcase of my recent projects.</p>
     <div class="divider"></div>
   </header>
 
-  <section class="video-section">
+  <section class="video-section fade-in">
     <h2>Video Examples</h2>
 
-    <div class="video-container">
+    <div class="video-container fade-in">
       <video controls>
-        <source src="ytshorts-downloader.com_jk7KVM.mp4" type="video/mp4" />
+        <source src="ytshorts-downloader.com_jk7KVM.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"TikTok-Style Short Edit" – Creative vertical example</p>
     </div>
 
-    <div class="video-container">
+    <div class="video-container fade-in">
       <video controls>
-        <source src="ezyZip.mp4" type="video/mp4" />
+        <source src="ezyZip.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"iShowSpeed Edit" - Short edit example</p>
     </div>
 
-    <div class="video-container">
+    <div class="video-container fade-in">
       <video controls>
-        <source src="funnyspeed (2) (1).mp4" type="video/mp4" />
+        <source src="funnyspeed (2) (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"Funny Speed Edit" - Short edit example</p>
     </div>
 
-    <div class="video-container">
+    <div class="video-container fade-in">
       <video controls>
-        <source src="ziasandblou.mp4" type="video/mp4" />
+        <source src="ziasandblou.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"Zias and Blou" - Dynamic reaction edit</p>
     </div>
 
-    <div class="video-container">
+    <div class="video-container fade-in">
       <video controls>
-        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4" />
+        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"Looksmaxxing Video Example" - Long-form edit</p>
     </div>
 
-    <div class="video-container">
+    <div class="video-container fade-in">
       <video controls>
-        <source src="descarga.mp4" type="video/mp4" />
+        <source src="descarga.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"Short with Captions Example" - Edited with subtitles</p>
     </div>
 
-    <div class="divider"></div>
+    <div class="divider-bottom"></div>
   </section>
 
-  <section class="cta-section">
+  <section class="cta-section fade-in">
     <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo" />
     <h2>Want to see more?</h2>
     <p>Check out my YouTube channel for more edits and examples!</p>
-    <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank" class="button">Click</a>
+    <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">
+      <button class="button">Click</button>
+    </a>
   </section>
 
   <footer>
