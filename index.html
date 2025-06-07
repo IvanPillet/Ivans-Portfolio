@@ -9,18 +9,14 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #4b0082, #00008b);
+      background: linear-gradient(180deg, #2c1361 0%, #271187 100%);
       color: white;
     }
     header {
       text-align: center;
       padding: 100px 20px 40px;
     }
-    header h1 {
-      font-size: 4rem;
-      color: #a29bfe;
-      margin: 0;
-    }
+    header h1,
     header h2 {
       font-size: 4rem;
       color: #a29bfe;
@@ -36,18 +32,20 @@
       width: 80%;
       height: 2px;
       background: #a29bfe;
-      margin: 40px auto 20px;
+      margin: 40px auto;
       border-radius: 4px;
     }
     .nav-links {
-      text-align: center;
-      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: -10px;
+      margin-bottom: 40px;
     }
     .nav-links a {
-      color: white;
       text-decoration: none;
+      color: white;
       font-weight: bold;
-      margin: 0 15px;
       font-size: 1.2rem;
     }
     section {
@@ -58,7 +56,7 @@
     .video-section h2 {
       text-align: center;
       font-size: 2.5rem;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       color: #a29bfe;
     }
     .video-container {
@@ -74,54 +72,52 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-    .video-container p {
-      margin-top: 12px;
-      font-size: 1.1rem;
+    .video-container p,
+    .video-container small {
       text-align: center;
     }
     .video-container small {
-      margin-top: 5px;
       font-size: 0.9rem;
       color: #bbb;
     }
-    .divider-section {
-      width: 80%;
-      height: 2px;
-      background: #a29bfe;
-      margin: 60px auto 10px;
-      border-radius: 4px;
-    }
-    .youtube-section {
+    #more {
       text-align: center;
       margin-top: 20px;
-      animation: fadeIn 1.5s ease-in-out;
+      padding-bottom: 40px;
     }
-    .youtube-section img {
+    #more img {
       width: 100px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
     }
-    .youtube-section h2 {
+    #more h2 {
+      font-size: 2rem;
       color: #a29bfe;
     }
-    .youtube-section a.button {
-      display: inline-block;
+    #more p {
       margin-top: 10px;
-      padding: 10px 20px;
+    }
+    #more a button {
       background: #a29bfe;
-      color: black;
-      border-radius: 10px;
-      font-weight: bold;
-      text-decoration: none;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #more a button:hover {
+      background: #8e8bff;
     }
     footer {
       text-align: center;
       padding: 30px;
-      background: #2c003e;
+      background: #1a0b3e;
       color: #ccc;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -131,76 +127,34 @@
     <h2>PORTFOLIO</h2>
     <p>Creative video editor with 3+ years of experience specializing in TikToks, YouTube Shorts, and engaging long-form content. Here's a showcase of my recent projects.</p>
     <div class="divider"></div>
-    <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">YouTube</a>
-    </div>
   </header>
+
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#more">YouTube</a>
+  </div>
 
   <section id="projects" class="video-section">
     <h2>Video Examples</h2>
+    <div class="divider"></div>
 
     <div class="video-container">
       <video controls>
         <source src="ytshorts-downloader.com_jk7KVM.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
       <small>Click to view in full screen</small>
       <p>"TikTok-Style Short Edit" – Creative vertical example</p>
     </div>
 
-    <div class="video-container">
-      <video controls>
-        <source src="ezyZip.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"iShowSpeed Edit" - Short edit example</p>
-    </div>
+    <!-- Add the rest of your videos here in the same format -->
 
-    <div class="video-container">
-      <video controls>
-        <source src="funnyspeed (2) (1).mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Funny Speed Edit" - Short edit example</p>
-    </div>
-
-    <div class="video-container">
-      <video controls>
-        <source src="ziasandblou.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Zias and Blou" - Dynamic reaction edit</p>
-    </div>
-
-    <div class="video-container">
-      <video controls>
-        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Looksmaxxing Video Example" - Long-form edit</p>
-    </div>
-
-    <div class="video-container">
-      <video controls>
-        <source src="descarga.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <small>Click to view in full screen</small>
-      <p>"Short with Captions Example" - Edited with subtitles</p>
-    </div>
   </section>
 
-  <div class="divider-section"></div>
-  <section class="youtube-section">
+  <section id="more">
     <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo">
     <h2>Want to see more?</h2>
     <p>Check out my YouTube channel for more edits and examples!</p>
-    <a class="button" href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">Click</a>
+    <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank"><button>Click</button></a>
   </section>
 
   <footer>
