@@ -1,147 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ivan's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #240046, #3c096c);
+      background: linear-gradient(135deg, #4b0082, #6a0dad);
       color: white;
     }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     header {
       text-align: center;
       padding: 100px 20px 40px;
     }
+
     header h1, header h2 {
       font-size: 4rem;
       color: #a29bfe;
       margin: 0;
     }
+
     header p {
       max-width: 700px;
       margin: 20px auto;
       font-size: 1.2rem;
       opacity: 0.85;
     }
+
     .divider {
-      width: 90%;
+      width: 60%;
       height: 2px;
       background: #a29bfe;
-      margin: 30px auto;
+      margin: 40px auto;
       border-radius: 4px;
     }
-    .nav-links {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .nav-links a {
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 800;
-      color: white;
-      font-size: 1.2rem;
-    }
+
     section {
       padding: 40px 20px;
       max-width: 960px;
       margin: 0 auto;
     }
+
     .video-section h2 {
       text-align: center;
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       color: #a29bfe;
     }
-    .video-divider {
-      width: 80%;
-      height: 2px;
-      background: #a29bfe;
-      margin: 30px auto;
-    }
+
     .video-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 60px;
-      animation: fadeIn 1.5s ease;
     }
-    .video-container video, .video-container iframe {
+
+    .video-container video {
       width: 100%;
       max-width: 460px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-    .video-container p {
-      margin-top: 12px;
-      font-size: 1.1rem;
-      text-align: center;
-    }
+
     .video-container small {
       margin-top: 5px;
       font-size: 0.9rem;
       color: #bbb;
     }
-    .yt-section {
+
+    .video-container p {
+      margin-top: 12px;
+      font-size: 1.1rem;
       text-align: center;
-      padding: 40px 20px 60px;
     }
-    .yt-section img {
-      width: 60px;
-      margin-bottom: 10px;
+
+    .cta-section {
+      text-align: center;
+      padding: 20px 0 60px;
     }
-    .yt-section h2 {
+
+    .cta-section img {
+      width: 150px; /* 🔥 BIGGER logo size */
+      margin: 20px 0 10px;
+    }
+
+    .cta-section h2 {
       font-size: 2rem;
       color: #a29bfe;
-      margin-bottom: 10px;
+      margin: 10px 0 0;
     }
-    .yt-section p {
+
+    .cta-section p {
       font-size: 1rem;
-      margin-bottom: 15px;
+      margin-top: 10px;
     }
-    .yt-section a {
-      display: inline-block;
-      padding: 10px 20px;
+
+    .cta-section .button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
       background: #a29bfe;
-      border-radius: 10px;
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
+      color: #2d2d2d;
+      cursor: pointer;
+      transition: background 0.3s;
     }
+
+    .cta-section .button:hover {
+      background: #c1b5ff;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
-      background: #1c0033;
+      padding: 30px;
+      background: #2d004d;
       color: #ccc;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    .divider-bottom {
+      width: 80%;
+      height: 2px;
+      background: #bbaaff;
+      margin: 40px auto 10px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <h1>IVAN'S</h1>
     <h2>PORTFOLIO</h2>
     <p>Creative video editor with 3+ years of experience specializing in TikToks, YouTube Shorts, and engaging long-form content. Here's a showcase of my recent projects.</p>
+    <div class="divider"></div>
   </header>
 
-  <div class="divider"></div>
-
-  <div class="nav-links">
-    <a href="#projects">Projects</a>
-    <a href="#youtube">YouTube</a>
-  </div>
-
-  <section id="projects" class="video-section">
+  <section class="video-section fade-in">
     <h2>Video Examples</h2>
-    <div class="video-divider"></div>
 
-    <div class="video-container">
+    <div class="video-container fade-in">
       <video controls>
         <source src="ytshorts-downloader.com_jk7KVM.mp4" type="video/mp4">
       </video>
@@ -149,17 +164,56 @@
       <p>"TikTok-Style Short Edit" – Creative vertical example</p>
     </div>
 
-    <!-- Add other video-container blocks here as needed -->
+    <div class="video-container fade-in">
+      <video controls>
+        <source src="ezyZip.mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"iShowSpeed Edit" - Short edit example</p>
+    </div>
 
+    <div class="video-container fade-in">
+      <video controls>
+        <source src="funnyspeed (2) (1).mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"Funny Speed Edit" - Short edit example</p>
+    </div>
+
+    <div class="video-container fade-in">
+      <video controls>
+        <source src="ziasandblou.mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"Zias and Blou" - Dynamic reaction edit</p>
+    </div>
+
+    <div class="video-container fade-in">
+      <video controls>
+        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"Looksmaxxing Video Example" - Long-form edit</p>
+    </div>
+
+    <div class="video-container fade-in">
+      <video controls>
+        <source src="descarga.mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"Short with Captions Example" - Edited with subtitles</p>
+    </div>
+
+    <div class="divider-bottom"></div>
   </section>
 
-  <div class="divider"></div>
-
-  <section id="youtube" class="yt-section">
-    <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo">
+  <section class="cta-section fade-in">
+    <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo" />
     <h2>Want to see more?</h2>
     <p>Check out my YouTube channel for more edits and examples!</p>
-    <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">Click</a>
+    <a href="https://www.youtube.com/@ClipStorm_Edits" target="_blank">
+      <button class="button">Click</button>
+    </a>
   </section>
 
   <footer>
