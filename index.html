@@ -9,15 +9,15 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #2c1361 0%, #271187 100%);
+      background: linear-gradient(to bottom, #2e008b, #2e1a94);
       color: white;
+      scroll-behavior: smooth;
     }
     header {
       text-align: center;
-      padding: 100px 20px 40px;
+      padding: 80px 20px 20px;
     }
-    header h1,
-    header h2 {
+    header h1, header h2 {
       font-size: 4rem;
       color: #a29bfe;
       margin: 0;
@@ -29,7 +29,7 @@
       opacity: 0.85;
     }
     .divider {
-      width: 80%;
+      width: 90%;
       height: 2px;
       background: #a29bfe;
       margin: 40px auto;
@@ -38,14 +38,13 @@
     .nav-links {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      margin-top: -10px;
-      margin-bottom: 40px;
+      gap: 2rem;
+      margin-bottom: 20px;
     }
     .nav-links a {
       text-decoration: none;
       color: white;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 1.2rem;
     }
     section {
@@ -65,59 +64,56 @@
       align-items: center;
       margin-bottom: 60px;
     }
-    .video-container video,
-    .video-container iframe {
+    .video-container video {
       width: 100%;
       max-width: 460px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-    .video-container p,
-    .video-container small {
+    .video-container p, .video-container small {
       text-align: center;
     }
     .video-container small {
-      font-size: 0.9rem;
       color: #bbb;
+      font-size: 0.9rem;
     }
-    #more {
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .youtube-section {
       text-align: center;
       margin-top: 20px;
-      padding-bottom: 40px;
     }
-    #more img {
-      width: 100px;
-      margin-bottom: 20px;
-      animation: fadeIn 2s ease-in-out;
+    .youtube-section img {
+      width: 80px;
+      margin-bottom: 15px;
     }
-    #more h2 {
-      font-size: 2rem;
+    .youtube-section h2 {
       color: #a29bfe;
     }
-    #more p {
-      margin-top: 10px;
+    .youtube-section p {
+      margin-bottom: 10px;
     }
-    #more a button {
-      background: #a29bfe;
+    .youtube-section a button {
+      background-color: #a29bfe;
       border: none;
+      color: black;
       padding: 10px 20px;
       border-radius: 8px;
-      font-size: 1rem;
+      font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
-    }
-    #more a button:hover {
-      background: #8e8bff;
     }
     footer {
       text-align: center;
       padding: 30px;
-      background: #1a0b3e;
+      background: #1a0033;
       color: #ccc;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -127,14 +123,13 @@
     <h2>PORTFOLIO</h2>
     <p>Creative video editor with 3+ years of experience specializing in TikToks, YouTube Shorts, and engaging long-form content. Here's a showcase of my recent projects.</p>
     <div class="divider"></div>
+    <div class="nav-links">
+      <a href="#videos">Projects</a>
+      <a href="#youtube">YouTube</a>
+    </div>
   </header>
 
-  <div class="nav-links">
-    <a href="#projects">Projects</a>
-    <a href="#more">YouTube</a>
-  </div>
-
-  <section id="projects" class="video-section">
+  <section class="video-section" id="videos">
     <h2>Video Examples</h2>
     <div class="divider"></div>
 
@@ -146,11 +141,49 @@
       <p>"TikTok-Style Short Edit" – Creative vertical example</p>
     </div>
 
-    <!-- Add the rest of your videos here in the same format -->
+    <div class="video-container">
+      <video controls>
+        <source src="ezyZip.mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"iShowSpeed Edit" - Short edit example</p>
+    </div>
 
+    <div class="video-container">
+      <video controls>
+        <source src="funnyspeed (2) (1).mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"Funny Speed Edit" - Short edit example</p>
+    </div>
+
+    <div class="video-container">
+      <video controls>
+        <source src="ziasandblou.mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"Zias and Blou" - Dynamic reaction edit</p>
+    </div>
+
+    <div class="video-container">
+      <video controls>
+        <source src="looksmaxxingproject (1) (1).mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"Looksmaxxing Video Example" - Long-form edit</p>
+    </div>
+
+    <div class="video-container">
+      <video controls>
+        <source src="descarga.mp4" type="video/mp4">
+      </video>
+      <small>Click to view in full screen</small>
+      <p>"Short with Captions Example" - Edited with subtitles</p>
+    </div>
   </section>
 
-  <section id="more">
+  <section class="youtube-section fade-in" id="youtube">
+    <div class="divider"></div>
     <img src="youtube-logo-youtube-icon-transparent-free-png.webp" alt="YouTube Logo">
     <h2>Want to see more?</h2>
     <p>Check out my YouTube channel for more edits and examples!</p>
